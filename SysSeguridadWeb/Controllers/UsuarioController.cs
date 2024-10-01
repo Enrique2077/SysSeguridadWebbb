@@ -14,7 +14,7 @@ namespace SysSeguridadWeb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class UsuarioController : ControllerBase
     {
         private readonly BDContext _context;
@@ -30,7 +30,7 @@ namespace SysSeguridadWeb.Controllers
         //login
 
         [HttpPost("login")]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public async Task<ActionResult> Login([FromBody] object pUsuario)
         {
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };

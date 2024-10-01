@@ -19,6 +19,12 @@ namespace SysSeguridadWeb.Auth
             _key = key;
         }
 
+        /// <summary>
+        /// Este metodo encripta una cadena de caracteres
+        /// </summary>
+        /// <param name="pUsuario"></param>
+        /// <returns></returns>
+
         public string EncriptarMD5(string pUsuario)
         {
             using (var md5 = MD5.Create())
